@@ -1,0 +1,24 @@
+﻿@using WebApplication2.Models
+@model List<Worker>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>WorkerInfo</title>
+</head>
+<body>
+
+    @foreach (var worker in Model)
+    {
+        <h1>@worker.Name</h1>
+        <h2>Sallary: @worker.TotalSallary()</h2>
+    }
+
+</body>
+</html>
